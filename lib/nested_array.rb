@@ -31,8 +31,12 @@ def assembled_matrix
 end
 
 def sorted_matrix
-produce_storage.sort
-  sorted_storage = produce_storage.sort
+CONVENTIONAL_PRODUCE.sort!
+ORGANIC_PRODUCE.sort!
+produce_storage = [
+  CONVENTIONAL_PRODUCE,
+  ORGANIC_PRODUCE,
+  ]
   # Using Array literal syntax only, build another nested array that 
   # uses the arrays of conventional and organic produce as before.
   # However, this time, sort each internal array alphabetically by the first character
